@@ -1,12 +1,7 @@
 import { FETCH_DATA, UPDATE_POKEMON, SET_ERROR } from '../actions'
 
 export const initialState = {
-    cards: [{
-        imageUrl: '',
-        name: '',
-        nationalPokedexNumber: 0
-
-    }],
+    cards: [],
     isFetchingData: false,
     error: ''
 };
@@ -17,11 +12,7 @@ export const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetchingData: true,
-                cards: [{
-                    imageUrl: '',
-                    name: '',
-                    nationalPokedexNumber: 0
-                }]
+                cards: []
             };
         case UPDATE_POKEMON:
             return {
